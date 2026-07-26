@@ -1,0 +1,25 @@
+h1{
+    color: #b230f8;
+    font-size: 60px;}
+
+header{
+    text-align: margin;
+    font-size: 50px;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #8a30f8;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.nome_da_receita{
+    text-align: center;
+    font-size: 30px;
+    color: #cb73fb;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
