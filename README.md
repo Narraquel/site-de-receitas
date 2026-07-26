@@ -1,10 +1,15 @@
 # 🍪 Site de Receitas — Receitas da Ana Raquel
 
-Um site simples de receitas feito com HTML, criado para reunir e compartilhar receitas caseiras de um jeito fácil de acessar.
+Um site de receitas feito com HTML e CSS, criado para reunir e compartilhar receitas caseiras de um jeito fácil de acessar.
 
 ## 📋 Sobre o projeto
 
-Este é um projeto em desenvolvimento de um site estático de receitas. Por enquanto ele conta com a seção de **Doces**, começando pela receita de biscoito amanteigado, e a ideia é ir adicionando novas receitas e seções com o tempo.
+Projeto em desenvolvimento de um site estático de receitas. A seção de **Doces** já está no ar com as primeiras receitas:
+
+- 🍪 Biscoito Amanteigado
+- 🍫 Bolo de Chocolate
+
+A ideia é ir adicionando novas receitas e seções com o tempo.
 
 ## 🚀 Como visualizar
 
@@ -21,20 +26,22 @@ Não precisa instalar nada! Basta:
 ```
 site-de-receitas/
 ├── index.html   # Página principal com as receitas
-└── FOTOS/       # Imagens das receitas
+├── style.css    # Estilos do site
+└── FOTOS/       # Imagens das receitas (em breve)
 ```
 
 ## 🛠️ Tecnologias utilizadas
 
 - **HTML5** — estrutura e conteúdo das páginas
+- **CSS3** — cores, fontes e layout
 
 ## 💡 Próximos passos
 
+- [ ] Adicionar as fotos das receitas na pasta `FOTOS/`
+- [ ] Incluir o modo de preparo de cada receita
 - [ ] Adicionar mais receitas de doces
 - [ ] Criar novas seções (salgados, bebidas, etc.)
-- [ ] Estilizar o site com CSS
-- [ ] Adicionar as fotos das receitas
-- [ ] Incluir o modo de preparo de cada receita
+- [ ] Publicar o site com GitHub Pages
 
 ## 👩‍🍳 Autora
 
