@@ -1,3 +1,4 @@
+
 # 🍪 Receitas da Ana Raquel
 
 Um site de receitas feito com HTML e CSS, criado para reunir e compartilhar receitas caseiras de um jeito fácil de acessar.
@@ -49,6 +50,7 @@ site-de-receitas/
 - [ ] Adicionar mais receitas de doces
 - [ ] Criar novas seções (salgados, bebidas, etc.)
 - [ ] Deixar o layout responsivo para celular
+- [ ] Possibilitar que os usuários adicionem novas receitas
 
 ## 👩‍🍳 Autora
 
