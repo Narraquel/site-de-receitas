@@ -16,6 +16,7 @@ Site estático de receitas em desenvolvimento. A seção de **Doces** já está 
 - 🍪 Biscoito Amanteigado
 - 🍫 Bolo de Chocolate
 - 🍮 Pudim
+- 🧊 Geladinho
 
 Cada receita traz a lista de **ingredientes** e o **modo de preparo** passo a passo, com foto do resultado. A ideia é ir adicionando novas receitas e seções com o tempo.
 
@@ -46,7 +47,6 @@ site-de-receitas/
 
 ## 💡 Próximos passos
 
-- [ ] Adicionar a foto do pudim
 - [ ] Adicionar mais receitas de doces
 - [ ] Criar novas seções (salgados, bebidas, etc.)
 - [ ] Deixar o layout responsivo para celular
