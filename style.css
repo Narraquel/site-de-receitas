@@ -35,6 +35,18 @@ header{
     margin-bottom: 20px;
 }
 
+.instrucoes h3 {
+    text-align:margin;
+    font-size:25px;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20;
+    margin-bottom: 20px;
+    background-color: #f45eff;
+    width: 250px;
+    height: 30px;
+}
+
 .biscoito_outracoisa.WEBP{
     width: 300px;
     height: 300px;
@@ -42,6 +54,12 @@ header{
 }
 
 .bolo_de_chocolate.JPG{
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+}
+
+.pudim.JPG{
     width: 300px;
     height: 300px;
     margin: 15px;
