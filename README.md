@@ -1,17 +1,24 @@
-# 🍪 Site de Receitas — Receitas da Ana Raquel
+# 🍪 Receitas da Ana Raquel
 
 Um site de receitas feito com HTML e CSS, criado para reunir e compartilhar receitas caseiras de um jeito fácil de acessar.
 
+## 🌐 Acesse o site
+
+O site está no ar pelo GitHub Pages! Acesse aqui:
+
+### 👉 [narraquel.github.io/site-de-receitas](https://narraquel.github.io/site-de-receitas/)
+
 ## 📋 Sobre o projeto
 
-Projeto em desenvolvimento de um site estático de receitas. A seção de **Doces** já está no ar com as primeiras receitas:
+Site estático de receitas em desenvolvimento. A seção de **Doces** já está no ar com as primeiras receitas:
 
 - 🍪 Biscoito Amanteigado
 - 🍫 Bolo de Chocolate
+- 🍮 Pudim
 
-A ideia é ir adicionando novas receitas e seções com o tempo.
+Cada receita traz a lista de **ingredientes** e o **modo de preparo** passo a passo, com foto do resultado. A ideia é ir adicionando novas receitas e seções com o tempo.
 
-## 🚀 Como visualizar
+## 🚀 Como rodar localmente
 
 Não precisa instalar nada! Basta:
 
@@ -26,22 +33,22 @@ Não precisa instalar nada! Basta:
 ```
 site-de-receitas/
 ├── index.html   # Página principal com as receitas
-├── style.css    # Estilos do site
-└── FOTOS/       # Imagens das receitas (em breve)
+├── style.css    # Estilos do site (cores, fontes e layout)
+└── fotos/       # Imagens das receitas
 ```
 
 ## 🛠️ Tecnologias utilizadas
 
 - **HTML5** — estrutura e conteúdo das páginas
 - **CSS3** — cores, fontes e layout
+- **GitHub Pages** — hospedagem gratuita do site
 
 ## 💡 Próximos passos
 
-- [ ] Adicionar as fotos das receitas na pasta `FOTOS/`
-- [ ] Incluir o modo de preparo de cada receita
+- [ ] Adicionar a foto do pudim
 - [ ] Adicionar mais receitas de doces
 - [ ] Criar novas seções (salgados, bebidas, etc.)
-- [ ] Publicar o site com GitHub Pages
+- [ ] Deixar o layout responsivo para celular
 
 ## 👩‍🍳 Autora
 
