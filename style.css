@@ -1,10 +1,20 @@
-h1{
+body{
+    padding: 20px;
+}
+
+
+
+h1{ background-color: #f45eff;
+    padding: 100px;
+    text-align: center;
     color: #b230f8;
-    font-size: 60px;    
+    font-size: 70px;    
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke: 1px #000000;
 }
 
 header{
-    text-align: margin;
+    padding: 20px;
     font-size: 50px;
     color: #000000;
     font-family: 'Courier New', Courier, monospace;
@@ -48,19 +58,22 @@ header{
 }
 
 .biscoito_outracoisa.WEBP{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: auto;
     margin: 15px;
+    border-radius: 10px;
 }
 
 .bolo_de_chocolate.JPG{
     width: 300px;
-    height: 300px;
+    height: auto;
     margin: 15px;
+    border-radius: 10px;
 }
 
 .pudim.JPG{
     width: 300px;
-    height: 300px;
+    height: auto;
     margin: 15px;
+    border-radius: 10px;
 }
