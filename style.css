@@ -3,13 +3,29 @@ body{
 }
 
 
-
-h1{ background-color: #f45eff;
-    padding: 100px;
+/*.banner{
+    background-color: #f45eff;
+    padding: 40px 20px;
     text-align: center;
     color: #b230f8;
-    font-size: 70px;    
-    -webkit-text-stroke-color: #000000;
+    font-size: 5vw;    
+    -webkit-text-stroke: 1px #000000;
+    box-sizing: border-box;
+    width: 100%;
+}*/
+
+.banner{
+    background-color: #f45eff;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.banner h1 {
+    margin: 0;
+    text-align: center;
+    color: #b230f8;
+    font-size: clamp(32px, 5vw, 70px);
     -webkit-text-stroke: 1px #000000;
 }
 
