@@ -15,21 +15,85 @@ body{
 }*/
 
 .banner{
-    background-color: #f45eff;
+    background-color: #f2a0d3;
     width: 100%;
-    padding: 40px 20px;
+    padding: clamp(20px, 5vw, 60px) 20px;
     box-sizing: border-box;
 }
 
 .banner h1 {
     margin: 0;
     text-align: center;
-    color: #b230f8;
+    color: #cb6ce6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: clamp(32px, 5vw, 70px);
-    -webkit-text-stroke: 1px #000000;
+    -webkit-text-stroke: 1px #5a0073;
 }
 
-header{
+header h1 {
+   text-align: margin;
+    font-size: 50px;
+    color: #5a0073;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:Verdana, Tahoma, sans-serif;
+
+}
+
+.pesquisa {
+    width: 500px;
+    height: 25px;
+    padding: 14px 20px;
+    background-color: #cb6ce6;
+    border: 2px solid #5a0073;
+    border-radius: 999px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.adicionar {
+    width: 500px;
+    height: 30px;
+    padding: 14px 20px;
+    background-color: #f2a0d3;
+    border: 2px solid #ff66c4;
+    border-radius: 999px;
+    outline: none;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.adicionar input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: #f2a0d3;
+    text-align: left;
+    font-size: 20px;
+    line-height: center;
+}
+
+
+.aba {
+    width: 500px;
+    height: 25px;
+    padding: 14px 20px;
+    background-color: #cb6ce6;
+    border: 2px solid #5a0073;
+    border-radius: 999px;
+    outline: none;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px ;
+}
+
+
+
+/*header{
     padding: 20px;
     font-size: 50px;
     color: #000000;
@@ -40,9 +104,9 @@ header{
     width: 150px;
     height: 60px;
     border-radius: 20px;
-}
+} */
 
-
+/*
 .nome_da_receita{
     text-align: margin;
     font-size: 30px;
@@ -99,4 +163,4 @@ header{
     height: auto;
     margin: 15px;
     border-radius: 10px;
-}
+} */
