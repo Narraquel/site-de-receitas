@@ -142,7 +142,12 @@ select {
     border-radius: 20px;
 } */
 
-/*
+.conteudo {
+    display: "none"
+}
+
+
+
 .nome_da_receita{
     text-align: margin;
     font-size: 30px;
@@ -199,4 +204,4 @@ select {
     height: auto;
     margin: 15px;
     border-radius: 10px;
-} */
+} 

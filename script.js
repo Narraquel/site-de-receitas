@@ -29,3 +29,37 @@ categorias.addEventListener("change", function () {
     });
 
 });
+
+// Pega todos os botões com a classe "abrir"
+const botoes =  document.querySelectorAll(".abrir");
+
+// Percorre todos os botões encontrados
+botoes.forEach(function (botao){
+
+    // Espera o usuário clicar no botão
+    botao.addEventListener("click", function() {
+
+        // Pega a div "conteudo" da receita correspondente
+        const conteudo = botao.parentElement.nextElementSibling;
+
+        // Verifica se o conteúdo já está aparecendo
+        if(conteudo.style.display === "block"){
+
+            // Esconde o conteúdo
+            conteudo.style.display = "none";
+
+            // Muda a seta para baixo
+            botao.textContent = "▼";
+        }
+
+        // Caso o conteúdo esteja escondido
+        else {
+
+            // Mostra o conteúdo
+            conteudo.style.display = "block";
+
+            // Muda a seta para cima
+            botao.textContent = "▲";
+        }
+    });
+});
