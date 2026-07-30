@@ -15,7 +15,7 @@ categorias.addEventListener("change", function () {
 
         // Se escolheu "Geral", mostra todas
         if (categoriaEscolhida === "geral") {
-            receita.style.display = block;  
+            receita.style.display = "block";  
         } 
          // Se a receita pertence à categoria escolhida
         else if (receita.classList.contains(categoriaEscolhida)){
@@ -43,23 +43,37 @@ botoes.forEach(function (botao){
         const conteudo = botao.parentElement.nextElementSibling;
 
         // Verifica se o conteúdo já está aparecendo
-        if(conteudo.style.display === "block"){
+        //if(conteudo.style.display === "block"){
+
+        // Verifica se o conteúdo está escondido
+        if(getComputedStyle(conteudo).display === "none"){
 
             // Esconde o conteúdo
-            conteudo.style.display = "none";
+            //conteudo.style.display = "none";
+
+            // Mostra o conteúdo
+            conteudo.style.display = "block"
 
             // Muda a seta para baixo
-            botao.textContent = "▼";
+           // botao.textContent = "▼";
+
+            // Muda a seta para cima
+            botao.textContent = "▲";
         }
 
         // Caso o conteúdo esteja escondido
         else {
+            // Esconde o conteúdo
+             conteudo.style.display = "none";
+
+            // Muda a seta para baixo
+            botao.textContent = "▼";
 
             // Mostra o conteúdo
-            conteudo.style.display = "block";
+            //conteudo.style.display = "block";
 
             // Muda a seta para cima
-            botao.textContent = "▲";
+            //botao.textContent = "▲";
         }
     });
 });
