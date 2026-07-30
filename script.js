@@ -77,3 +77,27 @@ botoes.forEach(function (botao){
         }
     });
 });
+
+// Pega a barra de pesquisa
+const pesquisa = document.getElementById("pesquisa");
+
+// Quando o usuário digitar
+pesquisa.addEventListener("input", function(){
+    // Texto digitado (em letras minúsculas)
+    const texto = pesquisa.value.toLoweCase();
+
+     // Percorre todas as receitas
+     receitas.forEach(function(receita) {
+
+        // Pega o nome da receita
+        const nome = receita.querySelector("h2").textContent.toLocaleLowerCase();
+
+        // Verifica se o nome contém o texto pesquisado
+        if(nome.includes(texto)){
+            receita.style.display = "block";
+        }
+        else {
+        receita.style.display ="none";
+        }
+     });
+});
