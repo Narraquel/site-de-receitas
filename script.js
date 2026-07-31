@@ -10,6 +10,7 @@ categorias.addEventListener("change", function () {
     // Descobre qual categoria foi escolhida
     const categoriaEscolhida = categorias.value;
 
+
     // Percorre todas as receitas
     receitas.forEach(function(receita) {
 
@@ -84,13 +85,13 @@ const pesquisa = document.getElementById("pesquisa");
 // Quando o usuário digitar
 pesquisa.addEventListener("input", function(){
     // Texto digitado (em letras minúsculas)
-    const texto = pesquisa.value.toLoweCase();
+    const texto = pesquisa.value.toLowerCase();
 
      // Percorre todas as receitas
      receitas.forEach(function(receita) {
 
         // Pega o nome da receita
-        const nome = receita.querySelector("h2").textContent.toLocaleLowerCase();
+        const nome = receita.querySelector("h2").textContent.toLowerCase();
 
         // Verifica se o nome contém o texto pesquisado
         if(nome.includes(texto)){
