@@ -1,104 +1,128 @@
-// Pega o select
+// ===================================================
+// FILTRO POR CATEGORIA (usado na página de listagem)
+// ===================================================
 const categorias = document.getElementById("categorias");
-
-// Pega todas as receitas
 const receitas = document.querySelectorAll(".receita");
 
-// Quando mudar a categoria
-categorias.addEventListener("change", function () {
-
-    // Descobre qual categoria foi escolhida
+if (categorias) {
+  categorias.addEventListener("change", function () {
     const categoriaEscolhida = categorias.value;
 
-
-    // Percorre todas as receitas
-    receitas.forEach(function(receita) {
-
-        // Se escolheu "Geral", mostra todas
-        if (categoriaEscolhida === "geral") {
-            receita.style.display = "block";  
-        } 
-         // Se a receita pertence à categoria escolhida
-        else if (receita.classList.contains(categoriaEscolhida)){
-            receita.style.display = "block";
-        }
-         // Caso contrário, esconde
-        else {
-            receita.style.display = "none";
-        }
-
+    receitas.forEach(function (receita) {
+      if (categoriaEscolhida === "geral") {
+        receita.style.display = "block";
+      } else if (receita.classList.contains(categoriaEscolhida)) {
+        receita.style.display = "block";
+      } else {
+        receita.style.display = "none";
+      }
     });
+  });
+}
 
+// ===================================================
+// ABRIR/FECHAR CONTEÚDO DA RECEITA (acordeão)
+// ===================================================
+const botoesAbrir = document.querySelectorAll(".abrir");
+
+botoesAbrir.forEach(function (botao) {
+  botao.addEventListener("click", function () {
+    const conteudo = botao.parentElement.nextElementSibling;
+
+    if (getComputedStyle(conteudo).display === "none") {
+      conteudo.style.display = "block";
+      botao.textContent = "▲";
+    } else {
+      conteudo.style.display = "none";
+      botao.textContent = "▼";
+    }
+  });
 });
 
-// Pega todos os botões com a classe "abrir"
-const botoes =  document.querySelectorAll(".abrir");
-
-// Percorre todos os botões encontrados
-botoes.forEach(function (botao){
-
-    // Espera o usuário clicar no botão
-    botao.addEventListener("click", function() {
-
-        // Pega a div "conteudo" da receita correspondente
-        const conteudo = botao.parentElement.nextElementSibling;
-
-        // Verifica se o conteúdo já está aparecendo
-        //if(conteudo.style.display === "block"){
-
-        // Verifica se o conteúdo está escondido
-        if(getComputedStyle(conteudo).display === "none"){
-
-            // Esconde o conteúdo
-            //conteudo.style.display = "none";
-
-            // Mostra o conteúdo
-            conteudo.style.display = "block"
-
-            // Muda a seta para baixo
-           // botao.textContent = "▼";
-
-            // Muda a seta para cima
-            botao.textContent = "▲";
-        }
-
-        // Caso o conteúdo esteja escondido
-        else {
-            // Esconde o conteúdo
-             conteudo.style.display = "none";
-
-            // Muda a seta para baixo
-            botao.textContent = "▼";
-
-            // Mostra o conteúdo
-            //conteudo.style.display = "block";
-
-            // Muda a seta para cima
-            //botao.textContent = "▲";
-        }
-    });
-});
-
-// Pega a barra de pesquisa
+// ===================================================
+// BARRA DE PESQUISA
+// ===================================================
 const pesquisa = document.getElementById("pesquisa");
 
-// Quando o usuário digitar
-pesquisa.addEventListener("input", function(){
-    // Texto digitado (em letras minúsculas)
+if (pesquisa) {
+  pesquisa.addEventListener("input", function () {
     const texto = pesquisa.value.toLowerCase();
 
-     // Percorre todas as receitas
-     receitas.forEach(function(receita) {
+    receitas.forEach(function (receita) {
+      const nome = receita.querySelector("h2").textContent.toLowerCase();
+      receita.style.display = nome.includes(texto) ? "block" : "none";
+    });
+  });
+}
 
-        // Pega o nome da receita
-        const nome = receita.querySelector("h2").textContent.toLowerCase();
+// ===================================================
+// ADICIONAR INGREDIENTE (formulário de nova receita)
+// ===================================================
+const campoIngrediente = document.getElementById("novoingrediente");
+const botaoAdicionarIngrediente = document.getElementById("adicionaringrediente");
+const listaIngredientes = document.getElementById("listaingrediente");
 
-        // Verifica se o nome contém o texto pesquisado
-        if(nome.includes(texto)){
-            receita.style.display = "block";
-        }
-        else {
-        receita.style.display ="none";
-        }
-     });
-});
+if (botaoAdicionarIngrediente) {
+  botaoAdicionarIngrediente.addEventListener("click", function () {
+    const texto = campoIngrediente.value.trim();
+    if (texto === "") return;
+
+    const linha = document.createElement("div");
+    linha.className = "ingrediente";
+
+    const item = document.createElement("p");
+    item.textContent = texto;
+
+    const remover = document.createElement("button");
+    remover.type = "button";
+    remover.className = "remover";
+    remover.textContent = "🗑️";
+    remover.addEventListener("click", function () {
+      linha.remove();
+    });
+
+    linha.appendChild(item);
+    linha.appendChild(remover);
+    listaIngredientes.appendChild(linha);
+
+    campoIngrediente.value = "";
+    campoIngrediente.focus();
+  });
+}
+
+// ===================================================
+// ADICIONAR PASSO (formulário de nova receita)
+// ===================================================
+const campoPasso = document.getElementById("novopasso");
+const botaoAdicionarPasso = document.getElementById("adicionarpasso");
+const listaPassos = document.getElementById("listapassos");
+let numeroPasso = 1;
+
+if (botaoAdicionarPasso) {
+  botaoAdicionarPasso.addEventListener("click", function () {
+    const texto = campoPasso.value.trim();
+    if (texto === "") return;
+
+    const linha = document.createElement("div");
+    linha.className = "passo";
+
+    const item = document.createElement("p");
+    item.textContent = `Passo ${numeroPasso}: ${texto}`;
+
+    const remover = document.createElement("button");
+    remover.type = "button";
+    remover.className = "remover";
+    remover.textContent = "🗑️";
+    remover.addEventListener("click", function () {
+      linha.remove();
+    });
+
+    linha.appendChild(item);
+    linha.appendChild(remover);
+    listaPassos.appendChild(linha);
+
+    numeroPasso++;
+    campoPasso.value = "";
+    campoPasso.focus();
+  });
+}

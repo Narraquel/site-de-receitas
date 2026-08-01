@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adicionar receitas</title>
+
+<body>
+    <div class="banner">
+        <h1>Receitas da Ana Raquel</h1>
+    </div>  
+
+     <div>
+        <header>
+            <h1><strong>Adicione sua receita!</strong></h1>
+        </header>
+    </div>  
+
+    <form class="form-receita">
+        <label>Nome da receita:</label>
+        <input type="text" id="nome">
+
+        <label>Categoria</label>
+        <select id="categoria">
+            <option>Doces</option>
+            <option>Salgados</option>
+            <option>Massas</option>
+            <option>Saladas</option>
+        </select>
+
+        <h3>Ingredientes</h3>
+
+        <div id="ingredientes">
+            
+            <div class="ingrediente">
+                <input
+                    id="novoingrediente"
+                    type="text"
+                    placeholder="ex: 2 xícaras de açúcar...">
+
+                <button type="button" class="remover">🗑️</button>
+            </div>
+        </div>
+
+        <button type="button" id="adicionaringrediente">
+            + Adcionar Ingrediente
+        </button>
+
+        <div id="listadeingredientes"></div>
+
+        <h3>Modo de preparo</h3>
+        <div id="passos">
+
+            <div class="passo" id="novopasso">
+                <textarea placeholder="Descreva o primeiro passo"></textarea>
+            </div>
+        </div>
+
+
+        <button type="button" id="adicionarpasso">
+            + Adicionar Passo
+        </button>    
+
+        <div id="listapassos"></div>
+
+        <button type="button" class="remover">🗑️</button>
+
+        <button type="submit">
+            Salvar receita
+        </button>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
