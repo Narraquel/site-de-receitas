@@ -62,7 +62,7 @@ header h1 {
     text-align: left;
     font-size: 25px;
     line-height: center ;
-    color: #e7b2ff;
+    color: #000000;
 }
 .pesquisar {
     background-color: #cb6ce6;
@@ -70,6 +70,23 @@ header h1 {
     outline: none;
     box-shadow: none;
     font-size: 20px;
+}
+
+.pesquisa input::placeholder{
+    color :#1b003b
+}
+
+.pesquisar input{
+     width: 300px;
+    padding: 5px ;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: #cb6ce6;
+    text-align: left;
+    font-size: 25px;
+    line-height: center ;
+    color: #050505;
 }
 
 .adicionar {
@@ -231,3 +248,5 @@ select {
     border-radius: 10px;
 
 }
+
+
